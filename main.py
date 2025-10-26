@@ -36,12 +36,15 @@ def main():
         graph[u].append(v)
         if d == 0:  # undirected
             graph[v].append(u)
-        
     path = find_hamiltonian_path(graph, n)
     if path:
         print(' '.join(map(str, path)))
     else:
         print('Não existe caminho Hamiltoniano')
+    return graph, n, path, d
 
 if __name__ == "__main__":
-    main()
+    graph, n, path, d = main()
+    # A visualização do grafo agora deve ser feita pelo arquivo view.py
+
+

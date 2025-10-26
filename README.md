@@ -60,6 +60,10 @@ Não existe caminho Hamiltoniano
 
 ### Pré-requisitos
 - Python 3.x instalado no sistema
+- Instale as bibliotecas necessárias:
+  ```zsh
+  pip install networkx matplotlib
+  ```
 
 ### Instruções de Execução
 
@@ -90,6 +94,40 @@ Não existe caminho Hamiltoniano
 ### Saída Esperada
 - Se existir caminho Hamiltoniano: imprime a sequência de vértices.
 - Se não existir: imprime `Não existe caminho Hamiltoniano`.
+
+## Como Visualizar o Grafo e o Caminho Hamiltoniano
+
+Para gerar e salvar a imagem do grafo com o Caminho Hamiltoniano destacado:
+
+1. Certifique-se de ter o arquivo de entrada (ex: `input.txt`) no formato já descrito.
+2. Execute o comando abaixo no terminal:
+   ```zsh
+   python3 view.py < input.txt
+   ```
+3. O programa irá:
+   - Encontrar e exibir no terminal o Caminho Hamiltoniano (se existir).
+   - Salvar a imagem do grafo com o caminho destacado em vermelho no arquivo `assets/grafo_hamiltoniano.png`.
+   - Se não houver caminho Hamiltoniano, apenas o grafo será desenhado sem destaque.
+
+### Exemplo de Saída Visual
+
+Arquivo de entrada:
+```
+4 6 1
+0 1
+0 2
+3 0
+1 2
+1 3
+2 3
+```
+
+Imagem gerada:
+
+![Exemplo de Grafo Hamiltoniano](assets/grafo_hamiltoniano_exemplo.png)
+
+- As arestas do caminho Hamiltoniano encontrado são destacadas em vermelho.
+- Todos os nós e arestas do grafo são exibidos com etiquetas para fácil identificação.
 
 ## Relatório Técnico
 
